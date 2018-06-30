@@ -21,6 +21,10 @@ android {
             java.srcDirs = ['src/main/java', 'src/main/java/Views', 'src/main/java/cs295capstone.tennistracker/views', 'src/main/java/cs295capstone.tennistracker/models', 'src/main/java/cs295capstone.tennistracker/models', 'src/main/java/cs295capstone.tennistracker/viewmodels']
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
