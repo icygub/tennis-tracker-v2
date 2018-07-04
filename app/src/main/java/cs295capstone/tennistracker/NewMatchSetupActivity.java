@@ -19,6 +19,7 @@ public class NewMatchSetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.new_match_setup);
         match = new Match("John", "Computer", 1, 6, true);
+        mBinding.setMatch(match);
 
         Button createNewMatchButton = findViewById(R.id.button_create_new_match);
         createNewMatchButton.setOnClickListener(new View.OnClickListener() {

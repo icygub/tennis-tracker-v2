@@ -2,7 +2,7 @@ package cs295capstone.tennistracker;
 
 public class Match {
 
-    public String player1Name;
+    private String player1Name;
     private String player2Name;
     private int setsPerMatch;
     private int gamesPerSet;
@@ -14,6 +14,10 @@ public class Match {
         this.setsPerMatch = setsPerMatch;
         this.gamesPerSet = gamesPerSet;
         this.player1ServesFirst = player1ServesFirst;
+    }
+
+    public Match() {
+
     }
 
     public String getPlayer1Name() {
