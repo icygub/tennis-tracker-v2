@@ -1,7 +1,10 @@
-package cs295capstone.tennistracker;
+package cs295capstone.tennistracker.models;
+
+import java.util.ArrayList;
 
 public class Match {
 
+    private static ArrayList<Match> matches;
     private String player1Name;
     private String player2Name;
     private int setsPerMatch;
@@ -9,6 +12,7 @@ public class Match {
     private boolean player1ServesFirst;
 
     public Match(String player1Name, String player2Name, int setsPerMatch, int gamesPerSet, boolean player1ServesFirst) {
+        this.matches = new ArrayList<>();
         this.player1Name = player1Name;
         this.player2Name = player2Name;
         this.setsPerMatch = setsPerMatch;
@@ -17,7 +21,10 @@ public class Match {
     }
 
     public Match() {
+    }
 
+    public static void addMatch(Match match) {
+        matches.add(match);
     }
 
     public String getPlayer1Name() {

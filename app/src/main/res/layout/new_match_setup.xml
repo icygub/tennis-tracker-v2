@@ -3,7 +3,10 @@
     <data>
         <variable
             name="match"
-            type="cs295capstone.tennistracker.Match"/>
+            type="cs295capstone.tennistracker.models.Match"/>
+        <variable
+            name="newmatchsetup"
+            type="cs295capstone.tennistracker.viewmodels.NewMatchSetupVM"/>
     </data>
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/player_1"
+            android:text="@{match.player1Name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +33,7 @@
             android:layout_marginTop="7dp"
             android:ems="10"
             android:hint="@string/name"
+            android:text="@{match.player1Name}"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="@string/player_2"
+            android:text="@{match.player1Name}"
             app:layout_constraintBottom_toTopOf="@+id/editText_player2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
